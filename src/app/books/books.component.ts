@@ -9,6 +9,10 @@ export class BooksComponent {
   a='First'
   b='Kenya'
   c='Goal'
-  
+  isDisabled=false
+
+  handleClick(){
+    this. isDisabled=!false
+  }
 
 }
