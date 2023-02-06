@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./books.component.scss']
 })
 export class BooksComponent {
+  a='First'
+  b='Kenya'
+  c='Goal'
+  
 
 }
