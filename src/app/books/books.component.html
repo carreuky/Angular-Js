@@ -1,8 +1,5 @@
-<p>books works!</p>
+<p>Books Info</p>
 
-<ul>
-    <li>{{a}}</li>
-    <li>{{b}}</li>
-    <li>{{c}}</li>
-</ul>
-<button (click)="handleClick()" [disabled]="isDisabled">Show Binding</button>
+<ng-container *ngFor="let singleBook of books">
+  <app-book [book]="singleBook"></app-book>
+</ng-container>

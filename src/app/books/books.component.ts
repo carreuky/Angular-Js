@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Book } from '../types/book';
 
 @Component({
   selector: 'app-books',
@@ -6,13 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./books.component.scss']
 })
 export class BooksComponent {
-  a='First'
-  b='Kenya'
-  c='Goal'
-  isDisabled=false
-
-  handleClick(){
-    this. isDisabled=!false
-  }
+  
+  books: Book[] = [
+    {
+      name: 'Blue',
+      age: 56
+    },
+    {
+      name: 'Wello',
+      age: 25
+    }
+  ]
 
 }
