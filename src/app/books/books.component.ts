@@ -19,4 +19,8 @@ export class BooksComponent {
     }
   ]
 
+  onParent(event: Book){
+    console.log(event)
+  }
+
 }
