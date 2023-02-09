@@ -16,4 +16,7 @@ this.cart.push(book)
   getCart(){
     return this.cart;
   }
+  remove(book: Book){
+    this.cart = this.cart.filter(a=> a !== book)
+  }
 }

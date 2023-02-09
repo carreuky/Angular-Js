@@ -1,6 +1,7 @@
 <li>
     {{book.name}} age is {{book.age}}
-    <button (click)="addToCart ()">add to list</button>
+    <button *ngIf="!inList" (click)="addToCart ()">add to list</button>
+    <button *ngIf="inList" (click)="removeFromCart ()">Remove</button>
 </li>
 
   

@@ -10,10 +10,18 @@ import { Book } from '../types/book';
 export class BookComponent {
 @Input() book: Book = {} as Book
 @Output() emitBook = new EventEmitter<Book>()
+inList: boolean = false
 
 constructor(private cartService: CartService){}
 
 addToCart(){
+  this.inList = true
   this.cartService.add(this.book)
 }
+removeFromCart (){
+  this.cartService.remove(this.book)
+
+}
+
+
 }
