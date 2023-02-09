@@ -17,8 +17,5 @@ export class BooksComponent implements OnInit {
      this.books = this.bookService.getBooks()
    }
 
-  onParent(event: Book){
-    console.log(event)
-  }
 
 }

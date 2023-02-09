@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CartService } from '../books/cart.service';
 import { Book } from '../types/book';
 
 @Component({
@@ -10,7 +11,9 @@ export class BookComponent {
 @Input() book: Book = {} as Book
 @Output() emitBook = new EventEmitter<Book>()
 
-clicked(){
-  this.emitBook.emit(this.book)
+constructor(private cartService: CartService){}
+
+addToCart(){
+  this.cartService.add(this.book)
 }
 }

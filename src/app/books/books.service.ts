@@ -12,9 +12,20 @@ export class BooksService {
         age: 56
       },
       {
-        name: 'Wello',
+        name: 'Isaa',
         age: 25
-      }
+      },
+      {
+        name: 'Wozaah',
+        age: 25
+      }, {
+        name: 'Zupaaah',
+        age: 25
+      }, {
+        name: 'toto',
+        age: 25
+      },
+
     ]
   }
 
