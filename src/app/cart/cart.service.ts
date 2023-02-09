@@ -12,4 +12,8 @@ export class CartService {
     console.log(book)
 this.cart.push(book)
   }
+
+  getCart(){
+    return this.cart;
+  }
 }

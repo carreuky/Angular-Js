@@ -1,0 +1,7 @@
+<p>cart works!</p>
+<div *ngIf="getCart().length > 0">
+    <ul *ngFor="let person of getCart()">
+        <li>{{person.name}}</li>
+    </ul>
+</div>
+<div *ngIf="getCart().length == 0">No list</div>
