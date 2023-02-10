@@ -19,7 +19,9 @@ addToCart(){
   this.cartService.add(this.book)
 }
 removeFromCart (){
+  this.inList = false
   this.cartService.remove(this.book)
+
 
 }
 
