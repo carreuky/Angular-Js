@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { LoginForm } from 'src/app/types/auth';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss']
 })
-export class LoginComponent {
-
+export class RegisterComponent {
   form: LoginForm = {
     email: '',
     password: ''
