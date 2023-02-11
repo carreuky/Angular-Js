@@ -8,6 +8,7 @@ import { BookComponent } from './book/book.component';
 import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AuthModule } from './auth/auth.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,12 @@ import { AuthModule } from './auth/auth.module';
     BooksComponent,
     BookComponent,
     CartComponent,
-    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AuthModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

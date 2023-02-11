@@ -1,16 +1,21 @@
-import { Component } from '@angular/core';
-import { LoginForm } from 'src/app/types/auth';
-
+import { Component, OnInit } from '@angular/core';
+import { RegisterForm } from 'src/app/types/auth';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrls: ['./register.component.css'],
 })
-export class RegisterComponent {
-  form: LoginForm = {
+export class RegisterComponent implements OnInit {
+  form: RegisterForm = {
     email: '',
-    password: ''
-  }
+    password: '',
+    confirm_password: '',
+  };
+
+  passwordMatched: boolean = true;
+
+
+  ngOnInit(): void {}
 
   submit(){
     console.log(this.form)

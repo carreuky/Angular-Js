@@ -1,60 +1,48 @@
-<div class="mt-20 justify-center flex">
-    <form (ngSubmit)="submit()">
-      <!-- Email input -->
-      <div class="mb-4">
-        <input
-          type="text"
-          class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-          placeholder="Email address" 
-          [(ngModel)]="form.email" name="email" #email="ngModel" required
-        />
-        <span *ngIf="email.invalid && (email.touched)" class="bg-red-400">
-          Email must be valid
-        </span>
+<div class="flex justify-center">
+  <form (ngSubmit)="submit()" #myForm="ngForm"
+      class="p-4 mt-20 rounded-lg border m-auto w-1/3">
+      <h1 class="text-center text-xl">Register</h1>
+      <div class="my-5 w-full">
+          <label for="email">Email</label>
+          <input type="email" id="email"
+              class="p-2 rounded w-full border text-sm"
+              placeholder="Email Address" [(ngModel)]="form.email"
+              name="email" #email="ngModel" required>
       </div>
-      
-
-      <!-- Password input -->
-      <div class="mb-6">
-        <input
-          type="password"
-          class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-          placeholder="Password"
-          [(ngModel)]="form.password" name="password" #password="ngModel" required
-        />
-        <span *ngIf="password.invalid && password.touched" class="bg-red-400">
-          Password must be valid
-        </span>      </div>
-
-      <div class="flex justify-between items-center mb-6">
-        <div class="form-group form-check">
-          <input
-            type="checkbox"
-            class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-            id="exampleCheck3"
-            checked
-          />
-          <label
-            class="form-check-label inline-block text-gray-800"
-            for="exampleCheck2"
-            >Remember me</label
-          >
-        </div>
-        <a
-          href="#!"
-          class="text-blue-600 hover:text-blue-700 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
-          >Forgot password?</a
-        >
+      <div *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="p-2 bg-red-300 text-red-800 rounded">
+          Email field must be valid
+      </div>
+      <div class="my-5 w-full">
+          <label for="password">Password</label>
+          <input type="password" id="password"
+              class="p-2 rounded w-full border text-sm" placeholder="Password"
+              [(ngModel)]="form.password" name="password" #password="ngModel"
+              required>
+      </div>
+      <div *ngIf="password.invalid && (password.dirty || password.touched)"
+          class="p-2 bg-red-300 text-red-800 rounded">
+          Password field must be valid
       </div>
 
-      <!-- Submit button -->
-      <button
-        type="submit"
-        class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
-        data-mdb-ripple="true"
-        data-mdb-ripple-color="light"
-      >
-        Sign in
-      </button>
-    </form>
-  </div>
+      <div class="my-5 w-full">
+          <label for="confirm_password">Confirm Password</label>
+          <input type="text" id="confirm_password"
+              class="p-2 rounded w-full border text-sm"
+              placeholder="Confirm Password"
+              [(ngModel)]="form.confirm_password" name="confirm_password"
+              #confirm_password="ngModel" required>
+      </div>
+      <div *ngIf="confirm_password.invalid && (confirm_password.dirty || confirm_password.touched)"
+          class="p-2 bg-red-300 text-red-800 rounded">
+          Confirm password field must be valid
+      </div>
+
+      <div class="my-5 w-full">
+          <button type="submit" [disabled]="myForm.form.invalid"
+              class="p-2 w-full bg-purple-700 text-white hover:bg-purple-900 rounded">
+                Submit
+          </button>
+      </div>
+  </form>
+</div>
