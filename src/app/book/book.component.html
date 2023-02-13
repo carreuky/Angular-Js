@@ -1,7 +1,18 @@
-<li>
-    {{book.name}} age is {{book.age}}
-    <button *ngIf="!inList" (click)="addToCart ()">add to list</button>
-    <button *ngIf="inList" (click)="removeFromCart ()">Remove</button>
-</li>
-
-  
+  <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+    <th
+      scope="row"
+      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+    >
+    {{book.name}}
+    </th>
+    <td class="px-6 py-4">{{book.position}}</td>
+    <td class="px-6 py-4">{{book.salary}}</td>
+    <td class="px-6 py-4">{{book.office}}</td>
+    <td class="px-6 py-4">
+      <a
+        href="#"
+        class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+        >{{book.edit}}</a
+      >
+    </td>
+  </tr>

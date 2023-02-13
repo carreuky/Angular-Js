@@ -9,13 +9,21 @@ import { BooksService } from './books.service';
 })
 export class BooksComponent implements OnInit {
   
-  books: Book[]=[]
+  lis: any =[]
+  books=[];
 
+  
   constructor(private bookService:BooksService){}
 
    ngOnInit(): void {
-     this.books = this.bookService.getBooks()
+     this.bookService.getBooks().subscribe(res=>{
+      this.lis=res;
+      this.books=this.lis.list
+      console.log(this.books)
+     })
    }
+
+   
 
 
 }

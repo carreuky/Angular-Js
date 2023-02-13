@@ -1,4 +1,10 @@
 export interface Book {
-    name: string;
-    age: number
+        name:string,
+        position:string,
+        office:string,
+        salary:string,
+        edit:string,
+        delete:string
+
+
 }

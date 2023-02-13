@@ -1,33 +1,14 @@
 import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BooksService {
+  constructor(private http:HttpClient){}
 
   getBooks(){
-    return [
-      {
-        name: 'Blue',
-        age: 56
-      },
-      {
-        name: 'Isaa',
-        age: 25
-      },
-      {
-        name: 'Wozaah',
-        age: 25
-      }, {
-        name: 'Zupaaah',
-        age: 25
-      }, {
-        name: 'toto',
-        age: 25
-      },
-
-    ]
+    return this.http.get('http://www.mocky.io/v2/5ea172973100002d001eeada')
   }
 
-  constructor() { }
 }

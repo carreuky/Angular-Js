@@ -21,8 +21,6 @@ addToCart(){
 removeFromCart (){
   this.inList = false
   this.cartService.remove(this.book)
-
-
 }
 
 
