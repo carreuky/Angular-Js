@@ -9,6 +9,7 @@ import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AuthModule } from './auth/auth.module';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     BooksComponent,
     BookComponent,
     CartComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
