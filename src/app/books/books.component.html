@@ -10,11 +10,14 @@
         <th scope="col" class="px-6 py-3">Position</th>
         <th scope="col" class="px-6 py-3">Office</th>
         <th scope="col" class="px-6 py-3">Salary</th>
-        <th scope="col" class="px-6 py-3">Edit</th>
+        <th scope="col" class="px-6 py-3">Editt</th>
       </tr>
     </thead>
-    <tbody *ngFor="let singleBook of books">
+    <tbody>
+      <tr *ngFor="let singleBook of books" class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
         <app-book [book]="singleBook"></app-book>
+      </tr>
+
     </tbody>
   </table>
 </div>
