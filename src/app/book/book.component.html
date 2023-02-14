@@ -1,16 +1,7 @@
-    <th
-      scope="row"
-      class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-    >
-    {{book.name}}
-    </th>
-    <td class="px-6 py-4">{{book.position}}</td>
-    <td class="px-6 py-4">{{book.salary}}</td>
-    <td class="px-6 py-4">{{book.office}}</td>
-    <td class="px-6 py-4">
-      <a
-        href="#"
-        class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-        >{{book.edit}}</a
-      >
-    </td>
+<div class="flex grid grid-cols-5 text-center  ">
+  <div class="border">{{ book.office }}</div>
+  <div class="border">{{ book.position }}</div>
+  <div class="border">{{ book.name }}</div>
+  <div class="border">{{ book.office }}</div>
+  <div class="border">{{ book.salary }}</div>
+</div>

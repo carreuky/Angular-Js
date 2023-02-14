@@ -1,23 +1,12 @@
 <p>Books Info</p>
 
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-    <thead
-      class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
-    >
-      <tr >
-        <th scope="col" class="px-6 py-3">Title</th>
-        <th scope="col" class="px-6 py-3">Position</th>
-        <th scope="col" class="px-6 py-3">Office</th>
-        <th scope="col" class="px-6 py-3">Salary</th>
-        <th scope="col" class="px-6 py-3">Editt</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let singleBook of books" class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-        <app-book [book]="singleBook"></app-book>
-      </tr>
-
-    </tbody>
-  </table>
+<div class="flex grid grid-cols-5 text-center gap-4 border">
+  <div>Office</div>
+  <div>Position</div>
+  <div>Name</div>
+  <div>Office</div>
+  <div>Salary</div>
 </div>
+<ng-container  *ngFor="let singleBook of books">
+  <app-book [book]="singleBook"></app-book>
+</ng-container>
